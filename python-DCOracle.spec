@@ -6,6 +6,7 @@ Version:	1.3.0
 Release:	1
 License:	Open Source
 Group:		Development/Languages/Python
+Group(de):	Entwicklung/Sprachen/Python
 Group(pl):	Programowanie/Jêzyki/Python
 Source0:	DCOracle-%{version}-nonbin.tgz
 #Source0:	http://www.zope.org/Products/DCOracle/DCOracle-%{version}.tgz
