@@ -1,4 +1,4 @@
-%define pp_subname DCOracle
+%define	pp_subname	DCOracle
 Summary:	Oracle interface for Python language
 Summary(pl):	Interfejs do bazy danych Oracle'a dla jêzyka Python
 Name:		python-%{pp_subname}
