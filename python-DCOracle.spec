@@ -1,19 +1,24 @@
-Summary(pl): Oracle interface for Python language
-Name:        python-DCOracle
-Version:     1.2.1
-Release:     1
-Copyright:   Open Source
-Group:       Development/Languages/Python
-Source:      DCOracle-%{version}-nonbin.tgz 
-Patch:       python-DCOracle-libs.patch
-BuildRoot:	 /tmp/%{name}-%{version}-root
-Requires:    python>=1.5
-#Buildprereq: python-devel>=1.5, sed
+Summary:       Oracle interface for Python language
+Summary(pl):   Interfejs do bazy danych Oracle'a dla jêzyka Python.
+Name:          python-DCOracle
+Version:       1.2.1
+Release:       1
+Copyright:     Open Source
+Group:         Development/Languages/Python
+Group(pl):     Programowanie/Jêzyki/Python
+Source:        DCOracle-%{version}-nonbin.tgz 
+Patch:         python-DCOracle-libs.patch
+BuildRoot:	   /tmp/%{name}-%{version}-root
+Requires:      python >= 1.5
+#BuildRequires: python-devel >= 1.5, sed
 
 %description
+This package contains module that allows connect to Oracle
+database in Python programs.
 
 %description -l pl
-
+Pakiet ten zawiera modu³ dla jêzyka Python umo¿liwiaj±cy 
+po³±czenie siê z baz± danych Oracle'a.
 						
 %prep
 %setup -n DCOracle-%{version}-nonbin
