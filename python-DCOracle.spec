@@ -44,7 +44,7 @@ END
 cd ../src
 cp Setup-8.0.4 Setup
 cp Makefile.pre.in-1.5 Makefile.pre.in
-make -f Makefile.pre.in boot
+%{__make} -f Makefile.pre.in boot
 make
 
 %install
