@@ -1,6 +1,7 @@
+%define pp_subname DCOracle
 Summary:       Oracle interface for Python language
 Summary(pl):   Interfejs do bazy danych Oracle'a dla jêzyka Python.
-Name:          python-DCOracle
+Name:          python-%{pp_subname}
 Version:       1.2.1
 Release:       1
 Copyright:     Open Source
@@ -47,11 +48,10 @@ make -f Makefile.pre.in boot
 make
 
 %install
-install -d $RPM_BUILD_ROOT%{_libdir}/python1.5/site-packages/DCOracle
-install src/{Buffer,oci_}.so $RPM_BUILD_ROOT%{_libdir}/python1.5/site-packages/DCOracle
-install -m 644 DCOracle/* $RPM_BUILD_ROOT%{_libdir}/python1.5/site-packages/DCOracle
-echo %{_libdir}/python1.5/site-packages/DCOracle \
-  > $RPM_BUILD_ROOT%{_libdir}/python1.5/site-packages/DCOracle.pth
+install -d $RPM_BUILD_ROOT%{_libdir}/python1.5/site-packages/%{pp_subname}
+install src/{Buffer,oci_}.so $RPM_BUILD_ROOT%{_libdir}/python1.5/site-packages/%{pp_subname}
+install -m 644 %{pp_subname}/* $RPM_BUILD_ROOT%{_libdir}/python1.5/site-packages/%{pp_subname}
+echo %{pp_subname} > $RPM_BUILD_ROOT%{_libdir}/python1.5/site-packages/%{pp_subname}.pth
 gzip -9nf {DCOracle,LICENSE,README,CHANGES}.txt 
 
 
@@ -60,5 +60,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %doc {DCOracle,LICENSE,README,CHANGES}.txt.gz
-%{_libdir}/python1.5/site-packages/DCOracle.pth
-%{_libdir}/python1.5/site-packages/DCOracle
+%{_libdir}/python1.5/site-packages/%{pp_subname}.pth
+%{_libdir}/python1.5/site-packages/%{pp_subname}
