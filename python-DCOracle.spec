@@ -56,13 +56,11 @@ install src/{Buffer,oci_}.so $RPM_BUILD_ROOT%{_libdir}/python1.5/site-packages/%
 install %{pp_subname}/* $RPM_BUILD_ROOT%{_libdir}/python1.5/site-packages/%{pp_subname}
 echo %{pp_subname} > $RPM_BUILD_ROOT%{_libdir}/python1.5/site-packages/%{pp_subname}.pth
 
-gzip -9nf {DCOracle,LICENSE,README,CHANGES}.txt
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {DCOracle,LICENSE,README,CHANGES}.txt.gz
+%doc {DCOracle,LICENSE,README,CHANGES}.txt
 %{_libdir}/python1.5/site-packages/%{pp_subname}.pth
 %{_libdir}/python1.5/site-packages/%{pp_subname}
