@@ -1,12 +1,13 @@
-diff -Nur DCOracle-1.2.1-nonbin.orig/src/Setup-8.0.4 DCOracle-1.2.1-nonbin/src/Setup-8.0.4
---- DCOracle-1.2.1-nonbin.orig/src/Setup-8.0.4	Thu Feb 11 19:52:35 1999
-+++ DCOracle-1.2.1-nonbin/src/Setup-8.0.4	Sun Jul 18 14:21:34 1999
-@@ -15,7 +15,7 @@
+diff -Nur DCOracle.orig/src/Setup-8.0.4 DCOracle/src/Setup-8.0.4
+--- DCOracle.orig/src/Setup-8.0.4	Thu Feb 11 19:52:35 1999
++++ DCOracle/src/Setup-8.0.4	Tue Oct 19 00:29:22 1999
+@@ -15,7 +15,8 @@
  
  ORACLE_INCLUDES=$(ORACLE_HOME)/rdbms/demo -I$(ORACLE_HOME)/rdbms/public -I$(ORACLE_HOME)/network/public -I$(ORACLE_HOME)/plsql/public
  
 -ORACLE_L=-lnetv2 -lnttcp -lnetwork -lncr -lnetv2 -lnttcp -lnetwork -lclient -lvsn -lcommon -lgeneric -lmm -lnlsrtl3 -lcore4 -lnlsrtl3 -lcore4 -lnlsrtl3 -lnetv2 -lnttcp -lnetwork -lncr -lnetv2 -lnttcp -lnetwork -lclient -lvsn -lcommon -lgeneric -lepc -lnlsrtl3 -lcore4 -lnlsrtl3 -lcore4 -lnlsrtl3 -lclient -lvsn -lcommon -lgeneric -lnlsrtl3 -lcore4 -lnlsrtl3 -lcore4 -lnlsrtl3 -lsocket -lnsl -lgen -ldl -lelf -laio -lposix4 -lsql -lm -lm
-+ORACLE_L=-lnetv2 -lnttcp -lnetwork -lncr -lnetv2 -lnttcp -lnetwork -lclient -lvsn -lcommon -lgeneric -lmm -lnlsrtl3 -lcore4 -lnlsrtl3 -lcore4 -lnlsrtl3 -lnetv2 -lnttcp -lnetwork -lncr -lnetv2 -lnttcp -lnetwork -lclient -lvsn -lcommon -lgeneric -lepc -lnlsrtl3 -lcore4 -lnlsrtl3 -lcore4 -lnlsrtl3 -lclient -lvsn -lcommon -lgeneric -lnlsrtl3 -lcore4 -lnlsrtl3 -lcore4 -lnlsrtl3 -lnsl -ldl -lelf -lsql -lm -lm
++#ORACLE_L=-lnetv2 -lnttcp -lnetwork -lncr -lnetv2 -lnttcp -lnetwork -lclient -lvsn -lcommon -lgeneric -lmm -lnlsrtl3 -lcore4 -lnlsrtl3 -lcore4 -lnlsrtl3 -lnetv2 -lnttcp -lnetwork -lncr -lnetv2 -lnttcp -lnetwork -lclient -lvsn -lcommon -lgeneric -lepc -lnlsrtl3 -lcore4 -lnlsrtl3 -lcore4 -lnlsrtl3 -lclient -lvsn -lcommon -lgeneric -lnlsrtl3 -lcore4 -lnlsrtl3 -lcore4 -lnlsrtl3 -lsocket -lnsl -lgen -ldl -lelf -laio -lposix4 -lsql -lm -lm
++ORACLE_L=-lnjni8
  
  ORACLE_LIBS=$(ORACLE_HOME)/lib/ -L$(ORACLE_HOME)/rdbms/lib  $(ORACLE_HOME)/rdbms/lib/defopt.o $(ORACLE_HOME)/lib/sscoreed.o $(ORACLE_HOME)/lib/nautab.o $(ORACLE_HOME)/lib/naeet.o $(ORACLE_HOME)/lib/naect.o $(ORACLE_HOME)/lib/naedhs.o $(ORACLE_L) $(ORACLE_L)
  

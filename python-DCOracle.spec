@@ -2,7 +2,7 @@
 Summary:       Oracle interface for Python language
 Summary(pl):   Interfejs do bazy danych Oracle'a dla jêzyka Python.
 Name:          python-%{pp_subname}
-Version:       1.2.1
+Version:       1.3.0
 Release:       1
 Copyright:     Open Source
 Group:         Development/Languages/Python
@@ -22,7 +22,7 @@ Pakiet ten zawiera modu³ dla jêzyka Python umo¿liwiaj±cy
 po³±czenie siê z baz± danych Oracle'a.
 						
 %prep
-%setup -n DCOracle-%{version}-nonbin
+%setup -n DCOracle
 %patch -p1
 
 %build
