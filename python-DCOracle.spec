@@ -9,7 +9,7 @@ Group:         Development/Languages/Python
 Group(pl):     Programowanie/Jêzyki/Python
 Source:        DCOracle-%{version}-nonbin.tgz 
 Patch:         python-DCOracle-libs.patch
-BuildRoot:	   /tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:      python >= 1.5
 #BuildRequires: python-devel >= 1.5, sed
 
@@ -53,7 +53,6 @@ install src/{Buffer,oci_}.so $RPM_BUILD_ROOT%{_libdir}/python1.5/site-packages/%
 install -m 644 %{pp_subname}/* $RPM_BUILD_ROOT%{_libdir}/python1.5/site-packages/%{pp_subname}
 echo %{pp_subname} > $RPM_BUILD_ROOT%{_libdir}/python1.5/site-packages/%{pp_subname}.pth
 gzip -9nf {DCOracle,LICENSE,README,CHANGES}.txt 
-
 
 %clean
 rm -rf $RPM_BUILD_ROOT
