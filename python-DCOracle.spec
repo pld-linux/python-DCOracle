@@ -2,7 +2,7 @@ Summary(pl): Oracle interface for Python language
 Name:        python-DCOracle
 Version:     1.2.1
 Release:     1
-Copyright:   distributable
+Copyright:   Open Source
 Group:       Development/Languages/Python
 Source:      DCOracle-%{version}-nonbin.tgz 
 Patch:       python-DCOracle-libs.patch
@@ -20,7 +20,22 @@ Requires:    python>=1.5
 %patch -p1
 
 %build
-cd src
+cd DCOracle
+python - <<END
+import py_compile
+
+py_compile.compile("__init__.py")
+py_compile.compile("dbi.py")
+py_compile.compile("ociBind.py")
+py_compile.compile("ociCurs.py")
+py_compile.compile("ociProc.py")
+py_compile.compile("ociUtil.py")
+py_compile.compile("ocidb.py")
+py_compile.compile("ocitypes.py")
+
+END
+
+cd ../src
 cp Setup-8.0.4 Setup
 cp Makefile.pre.in-1.5 Makefile.pre.in
 make -f Makefile.pre.in boot
