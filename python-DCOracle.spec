@@ -4,11 +4,13 @@ Summary(pl):	Interfejs do bazy danych Oracle'a dla jêzyka Python
 Name:		python-%{pp_subname}
 Version:	1.3.0
 Release:	1
-Copyright:	Open Source
+License:	Open Source
 Group:		Development/Languages/Python
 Group(pl):	Programowanie/Jêzyki/Python
 Source0:	DCOracle-%{version}-nonbin.tgz
+#Source0:	http://www.zope.org/Products/DCOracle/DCOracle-%{version}.tgz
 Patch0:		python-DCOracle-libs.patch
+URL:		http://www.zope.org/Products/DCOracle/
 #BuildRequires:	python-devel >= 1.5, sed
 Requires:	python >= 1.5
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -42,8 +44,8 @@ py_compile.compile("ocitypes.py")
 END
 
 cd ../src
-cp Setup-8.0.4 Setup
-cp Makefile.pre.in-1.5 Makefile.pre.in
+cp -f Setup-8.0.4 Setup
+cp -f Makefile.pre.in-1.5 Makefile.pre.in
 %{__make} -f Makefile.pre.in boot
 %{__make}
 
