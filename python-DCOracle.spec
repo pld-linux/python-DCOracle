@@ -45,7 +45,7 @@ cd ../src
 cp Setup-8.0.4 Setup
 cp Makefile.pre.in-1.5 Makefile.pre.in
 %{__make} -f Makefile.pre.in boot
-make
+%{__make}
 
 %install
 install -d $RPM_BUILD_ROOT%{_libdir}/python1.5/site-packages/%{pp_subname}
