@@ -1,6 +1,6 @@
 %define	pp_subname	DCOracle
 Summary:	Oracle interface for Python language
-Summary(pl):	Interfejs do bazy danych Oracle'a dla jêzyka Python
+Summary(pl.UTF-8):   Interfejs do bazy danych Oracle'a dla jÄ™zyka Python
 Name:		python-%{pp_subname}
 Version:	1.3.0
 Release:	1
@@ -18,9 +18,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This package contains module that allows connect to Oracle database in
 Python programs.
 
-%description -l pl
-Pakiet ten zawiera modu³ dla jêzyka Python umo¿liwiaj±cy po³±czenie
-siê z baz± danych Oracle'a.
+%description -l pl.UTF-8
+Pakiet ten zawiera moduÅ‚ dla jÄ™zyka Python umoÅ¼liwiajÄ…cy poÅ‚Ä…czenie
+siÄ™ z bazÄ… danych Oracle'a.
 
 %prep
 %setup -q -n DCOracle
